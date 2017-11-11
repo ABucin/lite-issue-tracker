@@ -1,13 +1,21 @@
 @import (reference) '../../../../variables';
 
 nav {
-  background-color: @color-grey-800;
+  background-color: @color-grey-900;
+  font-size: @font-size-normal;
+  width: 150px;
+  min-height: 100vh;
 
   a {
     color: @color-grey-100;
 
     &:hover {
-      color: @color-grey-300;
+      background-color: @color-grey-1000;
+      color: @color-grey-200;
+    }
+
+    i {
+      margin-right: @margin-normal;
     }
   }
 }
