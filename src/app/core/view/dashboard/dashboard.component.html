@@ -1,7 +1,20 @@
-<div class="card">
-  <div class="card-header">
-    Tickets
+<div class="card-columns">
+  <div class="card">
+    <div class="card-header">
+      Tickets
+    </div>
+    <div class="card-body">
+      <ng-container *ngFor="let ticket of _tickets">
+        <app-ticket [ticket]="ticket"></app-ticket>
+      </ng-container>
+    </div>
   </div>
-  <div class="card-body">
+  <div class="card">
+    <div class="card-header">
+      Recent activity
+    </div>
+    <div class="card-body">
+      abucin TR-190 5 minutes ago
+    </div>
   </div>
 </div>

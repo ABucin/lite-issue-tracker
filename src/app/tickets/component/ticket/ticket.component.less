@@ -7,6 +7,7 @@
   margin-bottom: @margin-small;
   margin-top: @margin-small;
   padding: @padding-small @padding-normal;
+  position: relative;
 
   &:hover {
     background-color: @color-grey-200;
@@ -16,6 +17,12 @@
   .ticket-code {
     color: @color-blue-800;
     padding-right: @padding-small;
+  }
+
+  .ticket-options {
+    position: absolute;
+    right: 10px;
+    top: 10px;
   }
 
   .ticket-priority {

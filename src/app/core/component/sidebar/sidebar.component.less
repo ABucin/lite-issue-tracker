@@ -4,17 +4,22 @@
 @sidebar-width: 150px;
 
 nav {
-  background-color: @color-grey-900;
+  background-color: @color-grey-1000;
+  box-shadow: @shadow;
   font-size: @font-size-normal;
   min-width: @sidebar-width;
   min-height: @sidebar-height;
 
   a {
-    color: @color-grey-100;
+    color: @color-grey-200;
 
     &:hover {
-      background-color: @color-grey-1000;
-      color: @color-grey-200;
+      background-color: @color-grey-1100;
+      color: @color-grey-300;
+    }
+
+    &.active {
+      background-color: @color-grey-1100;
     }
 
     i {

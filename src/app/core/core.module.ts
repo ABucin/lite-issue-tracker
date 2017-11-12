@@ -6,7 +6,8 @@ import {AppRoutingModule} from '../app-routing.module';
 import {TicketsModule} from '../tickets/tickets.module';
 import {AnalyticsModule} from '../analytics/analytics.module';
 import {TeamModule} from '../team/team.module';
-import { SettingsComponent } from './view/settings/settings.component';
+import {SettingsComponent} from './view/settings/settings.component';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SettingsComponent } from './view/settings/settings.component';
   imports: [
     AnalyticsModule,
     AppRoutingModule,
+    CommonModule,
     TeamModule,
     TicketsModule
   ]
