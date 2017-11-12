@@ -1,10 +1,13 @@
 @import (reference) '../../../../variables';
 
+@sidebar-height: 100vh;
+@sidebar-width: 150px;
+
 nav {
   background-color: @color-grey-900;
   font-size: @font-size-normal;
-  width: 150px;
-  min-height: 100vh;
+  min-width: @sidebar-width;
+  min-height: @sidebar-height;
 
   a {
     color: @color-grey-100;
