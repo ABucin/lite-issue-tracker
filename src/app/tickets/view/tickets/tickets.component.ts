@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Ticket} from '../../model/ticket.model';
 
 @Component({
   selector: 'app-tickets',
@@ -8,7 +9,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class TicketsComponent implements OnInit {
 
-  constructor() { }
+  private _tickets: Ticket[];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

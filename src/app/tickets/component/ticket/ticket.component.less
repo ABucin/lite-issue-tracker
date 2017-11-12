@@ -1,0 +1,39 @@
+@import (reference) '../../../../variables';
+
+.ticket-container {
+  background-color: @color-grey-100;
+  border-radius: @border-radius-normal;
+  font-size: @font-size-small;
+  margin-bottom: @margin-small;
+  margin-top: @margin-small;
+  padding: @padding-small @padding-normal;
+
+  &:hover {
+    background-color: @color-grey-200;
+    cursor: pointer;
+  }
+
+  .ticket-code {
+    color: @color-blue-800;
+    padding-right: @padding-small;
+  }
+
+  .ticket-priority {
+    font-family: @font-icon;
+    padding-right: @padding-small;
+
+    &.ticket-priority-high {
+      &::before {
+        color: @color-red-800;
+        content: '\f062';
+      }
+    }
+
+    &.ticket-priority-low {
+      &::before {
+        color: @color-green-800;
+        content: '\f063';
+      }
+    }
+  }
+}
