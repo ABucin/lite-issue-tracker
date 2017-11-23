@@ -1,4 +1,4 @@
-<div class="ticket-container">
+<div class="ticket-container" dnd-draggable [dragEnabled]="true" [dragData]="ticket">
   <span class="ticket-code">{{ticket.code}}</span>
   <span [className]="generatePriorityIcon()"></span>
   <span class="ticket-title">{{ticket.title}}</span>

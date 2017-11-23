@@ -1,10 +1,10 @@
-<div class="card-group">
+<div class="card-group h-100">
   <div class="card">
     <div class="card-header text-center">
       Created
     </div>
-    <div class="card-body">
-      <ng-container *ngFor="let ticket of _tickets">
+    <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.CREATED)">
+      <ng-container *ngFor="let ticket of tickets?.created">
         <app-ticket [ticket]="ticket"></app-ticket>
       </ng-container>
     </div>
@@ -13,8 +13,8 @@
     <div class="card-header text-center">
       In progress
     </div>
-    <div class="card-body">
-      <ng-container *ngFor="let ticket of _tickets">
+    <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.IN_PROGRESS)">
+      <ng-container *ngFor="let ticket of tickets?.in_progress">
         <app-ticket [ticket]="ticket"></app-ticket>
       </ng-container>
     </div>
@@ -23,8 +23,8 @@
     <div class="card-header text-center">
       Testing
     </div>
-    <div class="card-body">
-      <ng-container *ngFor="let ticket of _tickets">
+    <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.TESTING)">
+      <ng-container *ngFor="let ticket of tickets?.testing">
         <app-ticket [ticket]="ticket"></app-ticket>
       </ng-container>
     </div>
@@ -33,8 +33,8 @@
     <div class="card-header text-center">
       Done
     </div>
-    <div class="card-body">
-      <ng-container *ngFor="let ticket of _tickets">
+    <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.DONE)">
+      <ng-container *ngFor="let ticket of tickets?.done">
         <app-ticket [ticket]="ticket"></app-ticket>
       </ng-container>
     </div>

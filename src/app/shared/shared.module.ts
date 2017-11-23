@@ -1,15 +1,15 @@
 import {NgModule} from '@angular/core';
-import {CoreModule} from '../core/core.module';
 import {CommonModule} from '@angular/common';
+import {DndModule} from 'ng2-dnd';
 
 @NgModule({
   exports: [
     CommonModule,
-    CoreModule
+    DndModule,
   ],
   imports: [
     CommonModule,
-    CoreModule
+    DndModule
   ]
 })
 export class SharedModule {

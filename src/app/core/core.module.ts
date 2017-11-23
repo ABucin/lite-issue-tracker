@@ -8,6 +8,7 @@ import {AnalyticsModule} from '../analytics/analytics.module';
 import {TeamModule} from '../team/team.module';
 import {SettingsComponent} from './view/settings/settings.component';
 import {CommonModule} from '@angular/common';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {CommonModule} from '@angular/common';
     AnalyticsModule,
     AppRoutingModule,
     CommonModule,
+    SharedModule,
     TeamModule,
     TicketsModule
   ]
