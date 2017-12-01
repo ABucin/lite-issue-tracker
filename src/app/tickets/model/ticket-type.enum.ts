@@ -1,4 +1,5 @@
 export enum ETicketType {
-  BUG = 'NUG',
+  BUG = 'BUG',
+  STORY = 'STORY',
   TASK = 'TASK'
 }

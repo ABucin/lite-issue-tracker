@@ -2,6 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Ticket} from '../../model/ticket.model';
 import {ETicketPriority} from '../../model/ticket-priority.enum';
 import {ETicketStatus} from "../../model/ticket-status.enum";
+import {ETicketType} from "../../model/ticket-type.enum";
 
 @Component({
   selector: 'app-tickets',
@@ -32,6 +33,20 @@ export class TicketsComponent implements OnInit {
     this.tickets.created[1].title = 'Setup infrastructure';
     this.tickets.created[1].code = 'TR-124';
     this.tickets.created[1].priority = ETicketPriority.LOW;
+
+    this.tickets.created[2] = new Ticket();
+    this.tickets.created[2].title = 'Revert script changes';
+    this.tickets.created[2].code = 'TR-125';
+
+    this.tickets.created[3] = new Ticket();
+    this.tickets.created[3].title = 'Fix CSS styling for bugs';
+    this.tickets.created[3].code = 'TR-126';
+    this.tickets.created[3].type = ETicketType.BUG;
+
+    this.tickets.created[4] = new Ticket();
+    this.tickets.created[4].title = 'QA story';
+    this.tickets.created[4].code = 'TR-127';
+    this.tickets.created[4].type = ETicketType.STORY;
   }
 
   /**

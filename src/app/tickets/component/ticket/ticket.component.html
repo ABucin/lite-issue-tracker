@@ -1,6 +1,6 @@
-<div class="ticket-container" dnd-draggable [dragEnabled]="true" [dragData]="ticket">
+<div dnd-draggable [dragEnabled]="true" [dragData]="ticket" [className]="generateContainerTypeClass()">
   <span class="ticket-code">{{ticket.code}}</span>
-  <span [className]="generatePriorityIcon()"></span>
+  <span [className]="generatePriorityIconClass()"></span>
   <span class="ticket-title">{{ticket.title}}</span>
   <span class="ticket-options fa fa-bars"></span>
 </div>

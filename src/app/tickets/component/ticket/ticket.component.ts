@@ -1,6 +1,7 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {Ticket} from '../../model/ticket.model';
 import {ETicketPriority} from '../../model/ticket-priority.enum';
+import {ETicketType} from "../../model/ticket-type.enum";
 
 @Component({
   selector: 'app-ticket',
@@ -19,7 +20,27 @@ export class TicketComponent implements OnInit {
   ngOnInit() {
   }
 
-  generatePriorityIcon(): string {
+  public generateContainerTypeClass(): string {
+    let type = '';
+
+    switch (this.ticket.type) {
+      case ETicketType.BUG: {
+        type = 'ticket-container-bug';
+        break;
+      }
+      case ETicketType.STORY: {
+        type = 'ticket-container-meeting';
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+
+    return `ticket-container ${type}`;
+  }
+
+  public generatePriorityIconClass(): string {
     let icon = '';
 
     switch (this.ticket.priority) {
