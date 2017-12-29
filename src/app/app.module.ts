@@ -5,6 +5,8 @@ import {SharedModule} from './shared/shared.module';
 import {AppRoutingModule} from './app-routing.module';
 import {APP_BASE_HREF} from '@angular/common';
 import {DndModule} from 'ng2-dnd';
+import {NgxChartsModule} from "@swimlane/ngx-charts";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import {DndModule} from 'ng2-dnd';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     DndModule.forRoot(),
+    NgxChartsModule,
     SharedModule
   ],
   providers: [{
