@@ -1,0 +1,23 @@
+@import (reference) '../../../../variables';
+
+.recent-activity {
+  display: flex;
+  padding-bottom: @padding-small;
+  padding-top: @padding-small;
+
+  .action {
+    font-family: @font-icon;
+
+    &.action-comment::before {
+      content: @fa-var-comments-o;
+    }
+
+    &.action-worklog::before {
+      content: @fa-var-clock-o;
+    }
+  }
+
+  .amount {
+    max-width: 100px;
+  }
+}

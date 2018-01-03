@@ -14,7 +14,12 @@
       Recent activity
     </div>
     <div class="card-body">
-      abucin TR-190 5 minutes ago
+      <div class="recent-activity-container">
+        <ng-container *ngFor="let activity of recentActivity">
+          <app-activity [activity]="activity"></app-activity>
+        </ng-container>
+        <div class="load-more">Show more</div>
+      </div>
     </div>
   </div>
   <div class="card">

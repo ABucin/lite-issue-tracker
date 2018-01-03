@@ -9,6 +9,7 @@ import {TeamModule} from '../team/team.module';
 import {SettingsComponent} from './view/settings/settings.component';
 import {CommonModule} from '@angular/common';
 import {SharedModule} from '../shared/shared.module';
+import { ActivityComponent } from './component/activity/activity.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {SharedModule} from '../shared/shared.module';
     HomeComponent,
     SidebarComponent,
     SettingsComponent,
+    ActivityComponent,
   ],
   exports: [
     SidebarComponent

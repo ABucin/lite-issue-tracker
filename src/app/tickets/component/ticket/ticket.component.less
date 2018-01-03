@@ -22,7 +22,7 @@
 
   &.ticket-container-meeting {
     .ticket-code {
-      color: @color-aqua-800;
+      color: @color-orange-800;
     }
   }
 
@@ -32,9 +32,14 @@
   }
 
   .ticket-options {
+    &::before {
+      content: @fa-var-bars;
+    }
+
+    font-family: @font-icon;
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 6px;
   }
 
   .ticket-priority {
@@ -44,14 +49,14 @@
     &.ticket-priority-high {
       &::before {
         color: @color-red-800;
-        content: '\f062';
+        content: @fa-var-arrow-up;
       }
     }
 
     &.ticket-priority-low {
       &::before {
         color: @color-green-800;
-        content: '\f063';
+        content: @fa-var-arrow-down;
       }
     }
   }

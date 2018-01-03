@@ -1,6 +1,6 @@
 <div dnd-draggable [dragEnabled]="true" [dragData]="ticket" [className]="generateContainerTypeClass()">
   <span class="ticket-code">{{ticket.code}}</span>
-  <span [className]="generatePriorityIconClass()"></span>
+  <span [className]="generatePriorityIconClass()" *ngIf="canShowPriority()"></span>
   <span class="ticket-title">{{ticket.title}}</span>
-  <span class="ticket-options fa fa-bars"></span>
+  <span class="ticket-options"></span>
 </div>

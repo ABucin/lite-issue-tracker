@@ -20,6 +20,10 @@ export class TicketComponent implements OnInit {
   ngOnInit() {
   }
 
+  public canShowPriority(): boolean {
+    return this.ticket.priority !== ETicketPriority.MEDIUM;
+  }
+
   public generateContainerTypeClass(): string {
     let type = '';
 
