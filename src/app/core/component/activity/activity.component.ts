@@ -1,7 +1,6 @@
 import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {Activity} from '../../model/activity';
-import {ETicketType} from "../../../tickets/model/ticket-type.enum";
-import {EActivityType} from "../../model/activity-type.enum";
+import {Activity} from '../../model/activity.model';
+import {EActivityType} from '../../model/activity-type.enum';
 
 @Component({
   selector: 'app-activity',

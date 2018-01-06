@@ -1,25 +1,49 @@
-<div class="card-columns">
-  <div class="card">
-    <div class="card-header">
-      Member list
-    </div>
-    <div class="card-body">
-      <p>click on name => user info displayed</p>
-      <h3>Contact</h3>
-      <p>profile pic</p>
-      <p>username</p>
-      <p>first name</p>
-      <p>last name</p>
-      <p>email</p>
-      <h3>Project</h3>
-      <p>name</p>
-      <p>role</p>
-      <p>expertise</p>
-      <p>open tickets</p>
-      <p>effort/estimation ratio</p>
-      <h3>Activity</h3>
-      <p>Latest tickets</p>
-      <p>Latest comments</p>
-    </div>
+<div class="card">
+  <div class="card-header">
+    Member list
+  </div>
+  <div class="card-body">
+    <ngx-datatable
+      class="table"
+      [columnMode]="'force'"
+      [columns]="columns"
+      [rowHeight]="'auto'"
+      [rows]="rows">
+    </ngx-datatable>
+
+    <ng-template #nameTemplate let-row="row">
+      <img [src]="row.picture">
+      <div class="user-name-container">
+        <div>{{row.firstName}} {{row.lastName}}</div>
+        <div class="user-expertise">{{row.expertise}}</div>
+      </div>
+    </ng-template>
+
+    <ng-template #optionsTemplate>
+      <span class="user-options"></span>
+    </ng-template>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Member details
+  </div>
+  <div class="card-body">
+    <p>click on name => user info displayed</p>
+    <h6>Contact</h6>
+    <p>profile pic</p>
+    <p>username</p>
+    <p>first name</p>
+    <p>last name</p>
+    <p>email</p>
+    <h6>Project</h6>
+    <p>name</p>
+    <p>role</p>
+    <p>expertise</p>
+    <p>open tickets</p>
+    <p>effort/estimation ratio</p>
+    <h6>Activity</h6>
+    <p>Latest tickets</p>
+    <p>Latest comments</p>
   </div>
 </div>

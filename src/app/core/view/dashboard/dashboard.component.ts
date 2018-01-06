@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Ticket} from '../../../tickets/model/ticket.model';
 import {ETicketPriority} from '../../../tickets/model/ticket-priority.enum';
-import {Activity} from '../../model/activity';
+import {Activity} from '../../model/activity.model';
 import {EActivityType} from '../../model/activity-type.enum';
 
 @Component({

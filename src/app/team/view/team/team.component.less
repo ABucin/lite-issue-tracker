@@ -1,0 +1,56 @@
+@import (reference) '../../../../variables';
+
+ngx-datatable.table {
+  font-size: @font-size-normal;
+  margin-bottom: 0;
+
+  .datatable-header {
+    display: none;
+  }
+
+  .datatable-body-row {
+    border-bottom: 1px solid @color-grey-100;
+    padding-bottom: @margin-small;
+    padding-top: @margin-small;
+
+    .datatable-body-cell {
+      padding-left: @padding-normal;
+      padding-right: @padding-normal;
+
+      .datatable-body-cell-label span {
+        position: absolute;
+        top: 10px;
+      }
+    }
+  }
+
+  .datatable-row-wrapper:first-of-type {
+    .datatable-body-row {
+      border-top: 1px solid @color-grey-100;
+    }
+  }
+
+  img {
+    margin-right: @margin-normal;
+    max-width: 30px;
+    vertical-align: inherit;
+  }
+
+  .user-expertise {
+    color: @color-grey-600;
+    font-size: @font-size-small;
+  }
+
+  .user-name-container {
+    display: inline-block;
+  }
+
+  .user-options {
+    font-family: @font-icon;
+    right: @margin-normal;
+
+    &::before {
+      content: @fa-var-bars;
+    }
+  }
+}
