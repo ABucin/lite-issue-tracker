@@ -22,11 +22,11 @@ export class TeamComponent implements OnInit {
     this.columns = [
       {
         cellTemplate: this.nameTemplate,
-        name: ''
+        name: 'User'
       },
       {
-        prop: 'username',
-        name: ''
+        name: 'Email',
+        prop: 'username'
       },
       {
         cellTemplate: this.optionsTemplate,

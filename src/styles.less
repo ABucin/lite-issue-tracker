@@ -10,7 +10,45 @@ body {
     box-shadow: @shadow;
   }
 
-  .table {
+  // ngx-datatable overwrites
+  ngx-datatable {
     font-size: @font-size-normal;
+    margin-bottom: 0;
+
+    .datatable-header {
+      font-weight: bold;
+
+      .datatable-header-cell {
+        padding-left: @padding-normal;
+        padding-right: @padding-normal;
+      }
+    }
+
+    .datatable-body-row {
+      border-bottom: 1px solid @color-grey-100;
+      padding-bottom: @margin-small;
+      padding-top: @margin-small;
+
+      &:hover {
+        background-color: @color-table-hover;
+        cursor: pointer;
+      }
+
+      .datatable-body-cell {
+        padding-left: @padding-normal;
+        padding-right: @padding-normal;
+
+        .datatable-body-cell-label span {
+          position: absolute;
+          top: @margin-normal;
+        }
+      }
+    }
+
+    .datatable-row-wrapper:first-of-type {
+      .datatable-body-row {
+        border-top: 1px solid @color-grey-100;
+      }
+    }
   }
 }
