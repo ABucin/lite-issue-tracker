@@ -1,6 +1,7 @@
-import {environment} from "../../../environments/environment";
+import {environment} from '../../../environments/environment';
+import {Entity} from './entity.model';
 
-export class User {
+export class User extends Entity {
   private _expertise: string;
   private _firstName: string;
   private _lastName: string;

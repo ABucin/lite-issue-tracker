@@ -1,5 +1,7 @@
 import {Component, OnInit, TemplateRef, ViewChild, ViewEncapsulation} from '@angular/core';
 import {User} from '../../../core/model/user.model';
+import {BsModalRef, BsModalService} from "ngx-bootstrap";
+import {TeamMemberModalComponent} from "../../component/modal/team-member-modal.component";
 
 @Component({
   selector: 'app-team',
@@ -9,14 +11,14 @@ import {User} from '../../../core/model/user.model';
 })
 export class TeamComponent implements OnInit {
 
+  public bsModalRef: BsModalRef;
   public columns;
   public rows: User[] = [];
 
   @ViewChild('nameTemplate') public nameTemplate: TemplateRef<any>;
   @ViewChild('optionsTemplate') public optionsTemplate: TemplateRef<any>;
 
-  constructor() {
-  }
+  constructor(private modalService: BsModalService) {}
 
   ngOnInit() {
     this.columns = [
@@ -48,4 +50,7 @@ export class TeamComponent implements OnInit {
     this.rows[1].expertise = 'UI/UX';
   }
 
+  public showModal() {
+    this.bsModalRef = this.modalService.show(TeamMemberModalComponent);
+  }
 }

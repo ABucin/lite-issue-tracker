@@ -4,6 +4,10 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
+  apiVersion: '1.0',
+  domain: 'localhost',
   images: '/assets/images',
-  production: false
+  production: false,
+  protocol: 'http',
+  port: 3000
 };

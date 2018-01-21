@@ -1,8 +1,9 @@
 import {ETicketStatus} from './ticket-status.enum';
 import {ETicketType} from './ticket-type.enum';
 import {ETicketPriority} from './ticket-priority.enum';
+import {Entity} from '../../core/model/entity.model';
 
-export class Ticket {
+export class Ticket extends Entity {
   private _code: string;
   private _priority: ETicketPriority = ETicketPriority.MEDIUM;
   private _status: ETicketStatus = ETicketStatus.CREATED;

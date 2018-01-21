@@ -8,6 +8,7 @@ import {DndModule} from 'ng2-dnd';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
+import {ModalModule} from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
     BrowserModule,
     BrowserAnimationsModule,
     DndModule.forRoot(),
+    ModalModule.forRoot(),
     NgxChartsModule,
     NgxDatatableModule,
     SharedModule
