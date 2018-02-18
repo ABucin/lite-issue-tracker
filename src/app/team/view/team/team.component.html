@@ -19,33 +19,8 @@
       </div>
     </ng-template>
 
-    <ng-template #optionsTemplate>
-      <span class="user-options"></span>
+    <ng-template #optionsTemplate let-row="row">
+      <span class="user-options" (click)="showModal(row)"></span>
     </ng-template>
-
-    <p (click)="showModal()">open user edit modal</p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-header">
-    Member details
-  </div>
-  <div class="card-body">
-    <p>click on name => user info displayed</p>
-    <h6>Contact</h6>
-    <p>profile pic</p>
-    <p>username</p>
-    <p>first name</p>
-    <p>last name</p>
-    <p>email</p>
-    <h6>Project</h6>
-    <p>name</p>
-    <p>role</p>
-    <p>expertise</p>
-    <p>open tickets</p>
-    <p>effort/estimation ratio</p>
-    <h6>Activity</h6>
-    <p>Latest tickets</p>
-    <p>Latest comments</p>
   </div>
 </div>
