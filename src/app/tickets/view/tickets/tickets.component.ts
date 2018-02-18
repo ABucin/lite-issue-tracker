@@ -30,7 +30,7 @@ export class TicketsComponent implements OnInit {
     this.tickets.created[0].priority = ETicketPriority.HIGH;
 
     this.tickets.created[1] = new Ticket();
-    this.tickets.created[1].title = 'Setup infrastructure';
+    this.tickets.created[1].title = 'Setup infrastructure before the project is started';
     this.tickets.created[1].code = 'TR-124';
     this.tickets.created[1].priority = ETicketPriority.LOW;
 

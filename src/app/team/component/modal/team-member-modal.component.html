@@ -5,20 +5,52 @@
   </button>
 </div>
 <div class="modal-body">
-  <h6>Contact</h6>
-  <p>profile pic</p>
-  <p>first name: {{user?.firstName}}</p>
-  <p>last name: {{user?.lastName}}</p>
-  <p>email: {{user?.username}}</p>
-  <h6>Project</h6>
-  <p>name</p>
-  <p>role</p>
-  <p>expertise: {{user?.expertise}}</p>
-  <p>open tickets</p>
-  <p>effort/estimation ratio</p>
-  <h6>Activity</h6>
-  <p>Latest tickets</p>
-  <p>Latest comments</p>
+  <form>
+    <h6>{{'Contact' | uppercase}}</h6>
+    <p>profile pic</p>
+    <div class="form-group row">
+      <label for="inputFirstName" class="col-sm-3 col-form-label col-form-label-sm">First name:</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control form-control-sm" id="inputFirstName" placeholder="First name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputLastName" class="col-sm-3 col-form-label col-form-label-sm">Last name:</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control form-control-sm" id="inputLastName" placeholder="Last name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail" class="col-sm-3 col-form-label col-form-label-sm">Email:</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control form-control-sm" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <h6>{{'Project' | uppercase}}</h6>
+    <div class="form-group row">
+      <label for="inputProjectName" class="col-sm-3 col-form-label col-form-label-sm">Name:</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control form-control-sm" id="inputProjectName" placeholder="Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputProjectRole" class="col-sm-3 col-form-label col-form-label-sm">Role:</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control form-control-sm" id="inputProjectRole" placeholder="Role">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputProjectExpertise" class="col-sm-3 col-form-label col-form-label-sm">Expertise:</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control form-control-sm" id="inputProjectExpertise" placeholder="Expertise">
+      </div>
+    </div>
+    <p>open tickets</p>
+    <p>effort/estimation ratio</p>
+    <h6>{{'Activity' | uppercase}}</h6>
+    <p>Latest tickets</p>
+    <p>Latest comments</p>
+  </form>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-primary">Save changes</button>

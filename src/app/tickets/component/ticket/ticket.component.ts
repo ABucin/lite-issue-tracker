@@ -41,7 +41,7 @@ export class TicketComponent implements OnInit {
       }
     }
 
-    return `ticket-container ${type}`;
+    return `row ticket-container ${type}`;
   }
 
   public generatePriorityIconClass(): string {
