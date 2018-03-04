@@ -12,12 +12,13 @@ export const routes: Routes = [
   {
     canActivate: [AuthGuard],
     children: [
-      {path: '', component: DashboardComponent},
+      {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
       {path: 'analytics', component: AnalyticsComponent},
       {path: 'dashboard', component: DashboardComponent},
       {path: 'settings', component: SettingsComponent},
       {path: 'team', component: TeamComponent},
-      {path: 'tickets', component: TicketsComponent}
+      {path: 'tickets', component: TicketsComponent},
+      {path: 'logout', component: DashboardComponent}
     ],
     component: HomeComponent,
     path: ''

@@ -1,44 +1,48 @@
 <div class="card h-100">
-  <div class="card-header text-center">
+  <div class="card-header text-center py-2 px-3">
     Sprint #1 - Setting up the Issue Tracker Project
   </div>
-  <div class="card-body h-100">
+  <div class="card-body h-100 p-0">
     <div class="card-group h-100">
       <div class="card">
-        <div class="card-header text-center">
-          Created
+        <div class="card-header py-2 px-3">
+          <span class="text-left">Created</span>
+          <span class="badge badge-ticket-count position-absolute px-2 py-1">{{tickets?.created?.length}}</span>
         </div>
-        <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.CREATED)">
+        <div class="card-body p-3" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.CREATED)">
           <ng-container *ngFor="let ticket of tickets?.created">
             <app-ticket [ticket]="ticket"></app-ticket>
           </ng-container>
         </div>
       </div>
       <div class="card">
-        <div class="card-header text-center">
-          In progress
+        <div class="card-header py-2 px-3">
+          <span class="text-left">In progress</span>
+          <span class="badge badge-ticket-count position-absolute px-2 py-1">{{tickets?.in_progress?.length}}</span>
         </div>
-        <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.IN_PROGRESS)">
+        <div class="card-body p-3" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.IN_PROGRESS)">
           <ng-container *ngFor="let ticket of tickets?.in_progress">
             <app-ticket [ticket]="ticket"></app-ticket>
           </ng-container>
         </div>
       </div>
       <div class="card">
-        <div class="card-header text-center">
-          Testing
+        <div class="card-header py-2 px-3">
+          <span class="text-left">Testing</span>
+          <span class="badge badge-ticket-count position-absolute px-2 py-1">{{tickets?.testing?.length}}</span>
         </div>
-        <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.TESTING)">
+        <div class="card-body p-3" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.TESTING)">
           <ng-container *ngFor="let ticket of tickets?.testing">
             <app-ticket [ticket]="ticket"></app-ticket>
           </ng-container>
         </div>
       </div>
       <div class="card">
-        <div class="card-header text-center">
-          Done
+        <div class="card-header py-2 px-3">
+          <span class="text-left">Done</span>
+          <span class="badge badge-ticket-count position-absolute px-2 py-1">{{tickets?.done?.length}}</span>
         </div>
-        <div class="card-body" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.DONE)">
+        <div class="card-body p-3" dnd-droppable (onDropSuccess)="updateTicketStatus($event, ticketStatus.DONE)">
           <ng-container *ngFor="let ticket of tickets?.done">
             <app-ticket [ticket]="ticket"></app-ticket>
           </ng-container>
