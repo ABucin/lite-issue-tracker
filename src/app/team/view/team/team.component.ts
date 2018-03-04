@@ -51,8 +51,13 @@ export class TeamComponent implements OnInit {
     this.rows[1].expertise = 'UI/UX';
   }
 
-  public showModal(user: User) {
+  public showModal($event: any) {
+    if ($event.type !== 'click') {
+      return;
+    }
+
     this.bsModalRef = this.modalService.show(TeamMemberModalComponent);
-    this.bsModalRef.content.user = user;
+    this.bsModalRef.content.user = $event.row as User;
+    this.showModal($event.row);
   }
 }

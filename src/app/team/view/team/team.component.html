@@ -8,8 +8,14 @@
       [columnMode]="'force'"
       [columns]="columns"
       [rowHeight]="'auto'"
-      [rows]="rows">
+      [rows]="rows"
+      (activate)="showModal($event)">
     </ngx-datatable>
+
+    <ng-template let-row="row">
+      <div><strong>Address</strong></div>
+      <div>{{row.address.city}}, {{row.address.state}}</div>
+    </ng-template>
 
     <ng-template #nameTemplate let-row="row">
       <img [src]="row.picture">
@@ -20,7 +26,7 @@
     </ng-template>
 
     <ng-template #optionsTemplate let-row="row">
-      <span class="user-options" (click)="showModal(row)"></span>
+      <span class="user-options"></span>
     </ng-template>
   </div>
 </div>
