@@ -15,6 +15,18 @@ export class DashboardComponent implements OnInit {
   public recentActivity: Activity[] = [];
   public tickets: Ticket[] = [];
 
+  colorScheme = {
+    domain: ['#C62828']
+  };
+
+  max = 15;
+  value = 10;
+  units = `${this.max - this.value} days left`;
+
+  onSelect(event) {
+    console.log(event);
+  }
+
   constructor() {
   }
 
