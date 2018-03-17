@@ -1,6 +1,8 @@
 import {EActivityType} from './activity-type.enum';
+import {environment} from '../../../environments/environment';
 
 export class Activity {
+  private _picture: string = `${environment.images}/user.png`;
   private _source: string;
   private _target: string;
   private _time: string;
@@ -45,5 +47,13 @@ export class Activity {
 
   set type(value: EActivityType) {
     this._type = value;
+  }
+
+  get picture(): string {
+    return this._picture;
+  }
+
+  set picture(value: string) {
+    this._picture = value;
   }
 }

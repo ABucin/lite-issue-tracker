@@ -1,6 +1,15 @@
 @import (reference) '../../../../variables';
 
-ngx-datatable.table {
+ngx-datatable.table-team {
+  .datatable-body-row {
+    .datatable-body-cell {
+      span {
+        position: absolute;
+        top: @margin-normal;
+      }
+    }
+  }
+
   img {
     margin-right: @margin-normal;
     max-width: 30px;

@@ -3,6 +3,28 @@
 .recent-activity-container {
   font-size: @font-size-small;
 
+  .datatable-body-cell {
+    img {
+      margin-right: @margin-normal;
+      max-width: 20px;
+      vertical-align: bottom;
+    }
+
+    img + span {
+      vertical-align: top;
+    }
+
+    .icon-comment::before {
+      content: @fa-var-comment-o;
+      font-family: @font-icon;
+    }
+
+    .icon-user::before {
+      content: @fa-var-clock-o;
+      font-family: @font-icon;
+    }
+  }
+
   > .load-more {
     color: @color-orange-600;
     padding-top: @padding-normal;

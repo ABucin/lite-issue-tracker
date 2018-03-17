@@ -11,23 +11,37 @@
   </div>
   <div class="card">
     <div class="card-header py-2 px-3">
-      Recent activity
-    </div>
-    <div class="card-body p-3">
-      <div class="recent-activity-container">
-        <ng-container *ngFor="let activity of recentActivity">
-          <app-activity [activity]="activity"></app-activity>
-        </ng-container>
-        <div class="load-more">Show more</div>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header py-2 px-3">
       Workload
     </div>
     <div class="card-body p-3">
       Some pie chart
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header py-2 px-3">
+      Recent activity
+    </div>
+    <div class="card-body p-3">
+      <div class="recent-activity-container">
+        <ngx-datatable
+          class="table"
+          [columnMode]="'force'"
+          [columns]="columns"
+          [headerHeight]="false"
+          [rows]="recentActivity">
+        </ngx-datatable>
+
+        <ng-template #sourceTemplate let-row="row">
+          <img [src]="row.picture">
+          <span>{{row.source}}</span>
+        </ng-template>
+
+        <ng-template #activityTypeTemplate let-row="row">
+          <span [ngClass]="{'icon-comment': row.type === activityType.COMMENT.toString(), 'icon-user': row.type === activityType.WORKLOG.toString()}"></span>
+        </ng-template>
+
+        <div class="load-more">Show more</div>
+      </div>
     </div>
   </div>
   <div class="card">
